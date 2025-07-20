@@ -6,7 +6,7 @@ function Navbar() {
 
   return (
     <nav className=" w-full top-0 left-0 z-50 pt-0.5">
-      <div className="flex items-center justify-between py-2 px-6">
+      <div className="flex items-center justify-between py-2 px-6 md:items-start">
         {/* Logo & Hamburger */}
         <div className="flex items-center justify-between w-full">
           <div className="font-semibold text-3xl text-yellow-400 ml-4">
@@ -54,7 +54,7 @@ function Navbar() {
                 className={({ isActive }) =>
                   isActive
                     ? "bg-sky-50 text-black text-xl px-3 py-1 rounded-box transition"
-                    : "hover:bg-gray-100 text-black text-xl px-3 py-1 rounded-box transition"
+                    : "hover:bg-gray-50 text-black text-xl px-3 py-1 rounded-box transition"
                 }
               >
                 Home
@@ -67,7 +67,7 @@ function Navbar() {
                 className={({ isActive }) =>
                   isActive
                     ? "bg-sky-50 text-black text-xl px-3 py-1 rounded-box transition"
-                    : "hover:bg-gray-200 text-black text-xl px-3 py-1 rounded-box transition"
+                    : "hover:bg-gray-50 text-black text-xl px-3 py-1 rounded-box transition"
                 }
               >
                 About
@@ -80,7 +80,7 @@ function Navbar() {
                 className={({ isActive }) =>
                   isActive
                     ? "bg-sky-50 text-black text-xl px-3 py-1 rounded-box"
-                    : "hover:bg-gray-200 text-black text-xl px-3 py-1 rounded-box transition"
+                    : "hover:bg-gray-50 text-black text-xl px-3 py-1 rounded-box transition"
                 }
               >
                 Contact
@@ -94,7 +94,7 @@ function Navbar() {
           <div>
             <NavLink
               to="/login"
-              className="bg-sky-100 text-black px-2.5 py-0.5 rounded-sm hover:bg-sky-200 transition"
+              className="bg-gray-200 text-black px-2.5 py-0.5 rounded-sm hover:bg-sky-100 transition"
             >
               Login
             </NavLink>
@@ -102,7 +102,7 @@ function Navbar() {
           <div>
             <NavLink
               to="/register"
-              className="bg-sky-200 text-black px-3 py-1 rounded-sm hover:bg-sky-300 transition"
+              className="bg-sky-200 text-black text-lg px-3 py-1 rounded-sm hover:bg-sky-300 transition"
             >
               Register
             </NavLink>

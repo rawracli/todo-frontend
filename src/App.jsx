@@ -1,38 +1,47 @@
 import { Link } from "react-router-dom";
+import smallImg from "/src/assets/Start Your Organize Small.png";
+import bigImg from "/src/assets/Start Your Organize Big.png";
 
 function App() {
   return (
     <>
-      <div className="bg-white flex items-center min-h-screen py-10 2xl:py-20 2xl:px-60 px-6 mx-6 rounded-2xl">
-        <div className="grid xl:grid-cols-2 grid-cols-1 xl:space-x-5">
-          <div className="flex justify-center flex-col">
-            <div className="flex justify-end xl:hidden">
-            <img src="/src/assets/checklist-1-18.svg" className="w-[35rem]" alt="" />
-          </div>
-            <h1
-              className="font-bold xl:text-6xl text-center xl:text-start text-4xl text-white"
-              data-aos="fade-up"
-            >
-              <span className="text-yellow-400">Kelola tugas</span> harianmu
-              dengan <span className="text-yellow-400">cara yang</span> lebih
-              mudah <span className="text-yellow-400">dan teratur</span>
-            </h1>
-            <div
-              data-aos="fade-up"
-              className="pt-5 flex xl:justify-start justify-center"
-              data-aos-duration="1400"
-            >
-              <Link
-                to="/login"
-                className="bg-yellow-400 font-semibold text-white px-10 xl:text-3xl text-2xl py-2 shadow-lg rounded-4xl hover:bg-yellow-500 transition-colors"
-              >
-                Mulai Sekarang
-              </Link>
-            </div>
-          </div>
-          <div className="xl:flex justify-end hidden">
-            <img src="/src/assets/checklist-1-18.svg" className="xl:w-[35rem] w-[20rem]" alt="" />
-          </div>
+      <div className="bg-white flex flex-col items-center min-h-screen py-10 2xl:py-20 2xl:px-60 px-6 mx-8 rounded-2xl">
+        <div
+          className="flex flex-col items-center mt-20"
+          style={{
+            backgroundImage: `url('/src/assets/wave.png')`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+          }}
+        >
+          {/* <h1
+            className="font-bold xl:text-9xl text-center text-7xl text-white"
+            data-aos="fade-up"
+          >
+            <span className="from-gray-400 bg-gradient-to-r to-gray-600 bg-clip-text text-transparent">Start Your</span> Organize <br /> Journey <span className="text-sky-500">Here</span>
+          </h1> */}
+          <img
+            src={smallImg}
+            srcSet={`${smallImg} 640w, ${bigImg} 1024w`}
+            sizes="(max-width: 768px) 100vw, 1024px"
+            alt="Start Your Organize"
+            className="w-full h-auto"
+            onContextMenu={(e) => e.preventDefault()}
+            draggable={false}
+          />
+        </div>
+        <div
+          data-aos="fade-up"
+          className="pt-5 flex xl:justify-start justify-center"
+          data-aos-duration="1400"
+        >
+          <Link
+            to="/login"
+            className="bg-sky-400 font-semibold text-white px-5 md:text-xl text-xs py-1 shadow-lg rounded-xl hover:bg-sky-500 hover:mt-0.5 transition-colors"
+          >
+            Get Started
+          </Link>
         </div>
       </div>
 
