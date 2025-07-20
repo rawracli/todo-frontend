@@ -1,15 +1,17 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className=" w-full top-0 left-0 z-50">
-      <div className="flex items-center justify-between py-5 px-6">
+    <nav className=" w-full top-0 left-0 z-50 pt-0.5">
+      <div className="flex items-center justify-between py-2 px-6">
         {/* Logo & Hamburger */}
         <div className="flex items-center justify-between w-full">
-          <div className="font-semibold text-3xl text-yellow-400"><img src="logo.png" alt="" srcset="" className="w-12"/></div>
+          <div className="font-semibold text-3xl text-yellow-400 ml-4">
+            <img src="logo.png" alt="" srcset="" className="w-12" />
+          </div>
           {/* Mobile Navigation */}
           <div className="md:hidden">
             <button
@@ -44,72 +46,101 @@ function Navbar() {
         </div>
 
         {/* Desktop Navigation */}
-          <div className="hidden justify-center md:flex space-x-6 w-full items-center">
-            <Link
-              to="/"
-              className="text-black hover:text-yellow-400 transition"
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className="text-black hover:text-yellow-400 transition"
-            >
-              About
-            </Link>
-            <Link
-              to="/contact"
-              className="text-black hover:text-yellow-400 transition"
-            >
-              Contact
-            </Link>
+        <div className="hidden justify-center md:flex w-full items-center">
+          <div className="py-2 bg-white rounded-2xl md:flex">
+            <div className="transition px-2 border-r border-gray-200">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive
+                    ? "bg-sky-50 text-black text-xl px-3 py-1 rounded-box transition"
+                    : "hover:bg-gray-100 text-black text-xl px-3 py-1 rounded-box transition"
+                }
+              >
+                Home
+              </NavLink>
+            </div>
+
+            <div className="transition px-2 border-r border-l border-gray-200">
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive
+                    ? "bg-sky-50 text-black text-xl px-3 py-1 rounded-box transition"
+                    : "hover:bg-gray-200 text-black text-xl px-3 py-1 rounded-box transition"
+                }
+              >
+                About
+              </NavLink>
+            </div>
+
+            <div className="transition px-2 border-l border-gray-200">
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive
+                    ? "bg-sky-50 text-black text-xl px-3 py-1 rounded-box"
+                    : "hover:bg-gray-200 text-black text-xl px-3 py-1 rounded-box transition"
+                }
+              >
+                Contact
+              </NavLink>
+            </div>
           </div>
+        </div>
 
         {/* Desktop Buttons */}
         <div className="hidden justify-end md:flex w-full space-x-2">
-          <Link
-            to="/login"
-            className="bg-yellow-400 text-black px-4 py-1 rounded-sm hover:bg-yellow-500 transition"
-          >
-            Login
-          </Link>
-          <Link
-            to="/register"
-            className="bg-gray-600 text-black px-4 py-1 rounded-sm hover:bg-gray-700 transition"
-          >
-            Daftar
-          </Link>
+          <div>
+            <NavLink
+              to="/login"
+              className="bg-sky-100 text-black px-2.5 py-0.5 rounded-sm hover:bg-sky-200 transition"
+            >
+              Login
+            </NavLink>
+          </div>
+          <div>
+            <NavLink
+              to="/register"
+              className="bg-sky-200 text-black px-3 py-1 rounded-sm hover:bg-sky-300 transition"
+            >
+              Register
+            </NavLink>
+          </div>
         </div>
       </div>
 
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden bg-gray-900 px-6 py-4 space-y-3">
-          <Link to="/" className="block text-black hover:text-yellow-400">
+          <NavLink to="/" className="block text-black hover:text-yellow-400">
             Home
-          </Link>
-          <Link to="/about" className="block text-black hover:text-yellow-400">
+          </NavLink>
+          <NavLink
+            to="/about"
+            className="block text-black hover:text-yellow-400"
+          >
             About
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/contact"
             className="block text-black hover:text-yellow-400"
           >
             Contact
-          </Link>
+          </NavLink>
           <div className="flex flex-col pt-1">
-            <Link
+            <NavLink
               to="/login"
               className="flex-1 text-center bg-yellow-400 text-black px-4 py-2 rounded-sm hover:bg-yellow-500 transition"
             >
               Login
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/register"
               className="flex-1 mt-4 text-center bg-gray-600 text-black px-4 py-2 rounded-sm hover:bg-gray-700 transition"
             >
               Daftar
-            </Link>
+            </NavLink>
           </div>
         </div>
       )}

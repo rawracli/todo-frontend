@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function App() {
   return (
     <>
-      <div className="bg-gray-950 flex items-center min-h-screen py-10 2xl:py-20 2xl:px-60 px-6">
+      <div className="bg-white flex items-center min-h-screen py-10 2xl:py-20 2xl:px-60 px-6 mx-6 rounded-2xl">
         <div className="grid xl:grid-cols-2 grid-cols-1 xl:space-x-5">
           <div className="flex justify-center flex-col">
             <div className="flex justify-end xl:hidden">
