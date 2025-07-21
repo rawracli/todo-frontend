@@ -21,12 +21,20 @@ function App() {
           >
             <span className="from-gray-400 bg-gradient-to-r to-gray-600 bg-clip-text text-transparent">Start Your</span> Organize <br /> Journey <span className="text-sky-500">Here</span>
           </h1> */}
+          {/* Mobile only */}
           <img
             src={smallImg}
-            srcSet={`${smallImg} 940w, ${bigImg} 1024w`}
-            sizes="(max-width: 768px) 100vw, 1024px"
             alt="Start Your Organize"
-            className="w-full h-auto"
+            className="w-full h-auto block sm:hidden"
+            onContextMenu={(e) => e.preventDefault()}
+            draggable={false}
+          />
+
+          {/* Desktop only */}
+          <img
+            src={bigImg}
+            alt="Start Your Organize"
+            className="w-full h-auto hidden sm:block"
             onContextMenu={(e) => e.preventDefault()}
             draggable={false}
           />
@@ -38,7 +46,7 @@ function App() {
         >
           <Link
             to="/login"
-            className="bg-sky-400 font-semibold text-white px-5 md:text-xl text-xs py-1 shadow-lg rounded-xl hover:bg-sky-500 hover:mt-0.5 transition-colors"
+            className="bg-sky-400 font-semibold text-white px-5 md:text-xl text-xs py-1 shadow-lg rounded-xl hover:bg-sky-500  transition-colors"
           >
             Get Started
           </Link>
@@ -46,19 +54,59 @@ function App() {
       </div>
 
       {/* Dekstop & Mobile ex */}
-      <div className="bg-white min-h-screen justify-center align-top w-full flex lg:pt-3">
-        <div className="bg-gray-50 w-[98%] lg:w-[90%] h-150 rounded-4xl justify-center items-center flex flex-col">
-          <div className="bg-gray-100 w-[90%] lg:w-[85%] h-124 rounded-full items-center justify-center flex flex-col ">
+      <div className="bg-white min-h-screen justify-center align-top w-full flex">
+        <div className="bg-gray-50 w-[98%] h-150 rounded-4xl justify-center items-center flex flex-col">
+          <div className="bg-gray-100 w-[90%] h-124 rounded-full items-center justify-center flex flex-col ">
             {/* <div className="bg-amber-300"></div> */}
             {/* <div className="bg-sky-800"></div> */}
-            <div className="items-center justify-center flex lg:pr-17">
-              <img src="/src/assets/laptop.png" alt="" className="h-100 hidden md:block" />
-              <img src="/src/assets/mobile.png" alt="" className="h-100 block md:hidden lg:block" />
+            <div className="md:items-center justify-center flex lg:pr-17">
+              <div className="flex flex-col items-center justify-center">
+                <img
+                  src="/src/assets/laptop.png"
+                  alt=""
+                  className="h-100 hidden md:block"
+                />
+                <h3 className="hidden md:block font-bold text-xl sm:text-2xl text-center mt-1">
+                  A simple to-do app to keep you <br className="md:hidden" />
+                  organized {/*<br className="lg:hidden"/>*/} and{" "}
+                  <br className="hidden md:block" /> focused on{" "}
+                  <br className="md:hidden" />
+                  what matters.
+                </h3>
+              </div>
+
+              <div className="flex flex-col items-center justify-center md:hidden lg:flex">
+                <img src="/src/assets/mobile.png" alt="" className="h-100" />
+                <h3 className="font-bold text-xl sm:hidden sm:text-2xl text-center mt-1">
+                  A simple to-do app to keep you <br className="md:hidden" />
+                  organized {/*<br className="lg:hidden"/>*/} and{" "}
+                  <br className="hidden md:block" /> focused on{" "}
+                  <br className="md:hidden" />
+                  what matters.
+                </h3>
+                <Link
+                  to="/login"
+                  className="sm:hidden md:block bg-sky-400 font-semibold text-white px-5 md:text-xl text-xs py-1 shadow-lg rounded-xl hover:bg-sky-500 mt-3 transition-colors"
+                >
+                  See more
+                </Link>
+              </div>
+              <div className="hidden sm:flex sm:flex-col md:hidden items-start">
+                <h3 className="font-bold text-xl sm:text-2xl mt-20 ml-5">
+                  A simple to-do app to keep you <br className="md:hidden" />
+                  organized {/*<br className="lg:hidden"/>*/} and{" "}
+                  <br className="hidden md:block" /> focused on{" "}
+                  <br className="md:hidden" />
+                  what matters.
+                </h3>
+                <Link
+                  to="/login"
+                  className=" bg-sky-400 font-semibold text-white px-5 md:text-xl text-xs py-1 shadow-lg rounded-xl hover:bg-sky-500 mt-3 ml-8 transition-colors"
+                >
+                  See more
+                </Link>
+              </div>
             </div>
-            <h3 className="font-bold text-xl sm:text-2xl text-center mt-1">
-              A simple to-do app to keep you <br className="sm:hidden"/>organized {/*<br className="lg:hidden"/>*/} and <br className="hidden md:block"/> focused on <br className="sm:hidden"/>what
-              matters.
-            </h3>
           </div>
         </div>
       </div>
