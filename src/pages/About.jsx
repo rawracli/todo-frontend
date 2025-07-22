@@ -1,28 +1,21 @@
 function About() {
   return (
-    <div className="bg-gray-950 min-h-screen py-40 xl:px-60 px-6">
-      <div>
-        <h1 className="xl:text-5xl text-4xl text-white font-bold xl:text-center" data-aos="fade-up">
-          <span className="text-yellow-400">Tentang</span> Kami
-        </h1>
-        <p
-          className="text-2xl text-gray-300 font-semibold xl:text-center text-justify mt-5"
-          data-aos="fade-up"
-          data-aos-duration="1200"
-        >
-          Todo Bee adalah aplikasi manajemen tugas yang dirancang untuk membantu
-          kamu menjadi lebih teratur, fokus, dan produktif setiap hari. Mulai
-          dari mencatat ide, menyusun jadwal harian, hingga menyelesaikan tugas
-          tepat waktu semua bisa dilakukan dalam satu platform yang simpel dan
-          menyenangkan.
-        </p>
-        <img
-          src="/src/assets/time-organization-concept-close-up.jpg"
-          className="mt-5 xl:h-[30rem] h-[20rem] w-full object-cover rounded-md shadow-lg"
-          alt=""
-          data-aos="fade-up"
-          data-aos-duration="1400"
-        />
+    <div className="bg-white flex flex-col min-h-screen mx-8 rounded-t-2xl">
+      <h1 className="text-[15rem] pl-30 pt-20 leading-44">About</h1>
+      <div className="flex mt-4">
+        <div className=" flex bg-[#F6F6F6] w-[60%] p-4 pl-9 text-3xl font-bold rounded-r-2xl leading-11">
+          <div className="flex flex-col">
+            <li>Company name</li>
+            <li>Founded In</li>
+            <li>Address</li>
+          </div>
+          <div className="ml-5 flex flex-col">
+            <h4>: FocusFlow ltd.</h4>
+            <h4>: Sukabumi, Indonesia</h4>
+            <h4>: July, 2025</h4>
+          </div>
+        </div>
+        <h1 className="text-[15rem] pl-4 pt-20 leading-0">Us</h1>
       </div>
     </div>
   );
