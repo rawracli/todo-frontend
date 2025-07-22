@@ -45,8 +45,8 @@ function App() {
         </div>
         <div
           data-aos="fade-up"
-          className="pt-5 flex xl:justify-start justify-center"
           data-aos-duration="1400"
+          className="pt-5 flex xl:justify-start justify-center"
         >
           <Link
             to="/login"
@@ -69,10 +69,14 @@ function App() {
                   src="/src/assets/laptop.png"
                   alt=""
                   className="h-100 hidden md:block"
-                  data-aos=""
+                  data-aos="fade"
                   data-aos-duration="1200"
                 />
-                <h3 className="hidden md:block font-bold text-xl sm:text-2xl text-center mt-1">
+                <h3
+                  className="hidden md:block font-bold text-xl sm:text-2xl text-center mt-1"
+                  data-aos="fade"
+                  data-aos-duration="1100"
+                >
                   A simple to-do app to keep you <br className="md:hidden" />
                   organized {/*<br className="lg:hidden"/>*/} and{" "}
                   <br className="hidden md:block" /> focused on{" "}
@@ -82,8 +86,19 @@ function App() {
               </div>
 
               <div className="flex flex-col items-center justify-center md:hidden lg:flex">
-                <img src="/src/assets/mobile.png" alt="" className="h-100" />
-                <h3 className="font-bold text-xl sm:hidden sm:text-2xl text-center mt-1">
+                <img
+                  src="/src/assets/mobile.png"
+                  alt=""
+                  className="h-100"
+                  data-aos="fade-in"
+                  data-aos-delay="100"
+                  data-aos-duration="1200"
+                />
+                <h3
+                  className="font-bold text-xl sm:hidden sm:text-2xl text-center mt-1"
+                  data-aos="fade-in"
+                  data-aos-duration="1300"
+                >
                   A simple to-do app to keep you <br className="md:hidden" />
                   organized {/*<br className="lg:hidden"/>*/} and{" "}
                   <br className="hidden md:block" /> focused on{" "}
@@ -93,6 +108,8 @@ function App() {
                 <Link
                   to="/login"
                   className="sm:hidden md:block bg-sky-400 font-semibold text-white px-5 md:text-xl text-xs py-1 shadow-lg rounded-xl hover:bg-sky-500 mt-3 transition-colors"
+                  data-aos="fade-in"
+                  data-aos-duration="1400"
                 >
                   See more
                 </Link>
