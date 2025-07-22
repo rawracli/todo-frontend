@@ -1,5 +1,7 @@
 @import "tailwindcss";
+@import 'tailwind-scrollbar-hide/v4';
 @plugin "daisyui";
+
 
 body {
   font-family: 'Times New Roman', Times, serif;
@@ -9,3 +11,17 @@ body {
 h1, h2, h3, h4, h5, h6, p {
   color: black;
 }
+
+.grab-scroll {
+  cursor: grab;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  user-select: none;
+}
+
+.grab-scroll:active {
+  cursor: grabbing;
+}
+

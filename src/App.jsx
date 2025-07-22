@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import smallImg from "/src/assets/Start Your Organize Small.png";
 import bigImg from "/src/assets/Start Your Organize Big.png";
 import feature from "./components/features/feature.jsx";
+import Card from "./components/Card.jsx";
 
 function App() {
   return (
@@ -155,6 +156,46 @@ function App() {
                   "Track your completed tasks and monitor your progress over time with visual indicators.",
               })}
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col bg-[#d1d5db] w-full py-10 px-6 min-h-screen">
+        <div className=" flex items-center justify-center w-full">
+          <h1 className="text-5xl md:text-6xl font-bold text-center">Trusted by Productive People</h1>
+        </div>
+        <div className="overflow-x-auto mt-15 scrollbar-hide">
+          <div className="flex min-w-max gap-10">
+            {Card({
+              name: "Hafidz",
+              image: "/src/assets/hafidz.png",
+              testimonial:
+                "“Finally, a to-do list that’s simple and fast. I use it every day to stay on track and I love how clean the interface is!”",
+            })}
+            {Card({
+              name: "Keiza",
+              image: "/src/assets/keiza.png",
+              testimonial:
+                "“I upgraded to Productivity+ and now I never miss a deadline. The reminders and cloud sync are game changers.”",
+            })}
+            {Card({
+              name: "Dirga",
+              image: "/src/assets/dirga.png",
+              testimonial:
+                "“I’ve tried so many productivity apps, but this one just works. Lightweight, reliable, and no distractions.”",
+            })}
+            {Card({
+              name: "Indra",
+              image: "/src/assets/indra.png",
+              testimonial:
+                "“Super easy to use and works on both my phone and laptop. I recommend it to all my friends.”",
+            })}
+            {Card({
+              name: "Rangga",
+              image: "/src/assets/rangga.png",
+              testimonial:
+                "“I upgraded to Productivity+ and now I never miss a deadline. The reminders and cloud sync are game changers.”",
+            })}
           </div>
         </div>
       </div>
