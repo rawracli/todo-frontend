@@ -16,6 +16,8 @@ function App() {
             backgroundSize: "contain",
             backgroundPosition: "center",
           }}
+          data-aos="fade-up"
+          data-aos-duration="1200"
         >
           {/* <h1
             className="font-bold xl:text-9xl text-center text-7xl text-white"
@@ -67,6 +69,8 @@ function App() {
                   src="/src/assets/laptop.png"
                   alt=""
                   className="h-100 hidden md:block"
+                  data-aos=""
+                  data-aos-duration="1200"
                 />
                 <h3 className="hidden md:block font-bold text-xl sm:text-2xl text-center mt-1">
                   A simple to-do app to keep you <br className="md:hidden" />
@@ -160,12 +164,15 @@ function App() {
         </div>
       </div>
 
+      {/* Testimonials */}
       <div className="flex flex-col bg-[#d1d5db] w-full py-10 px-6 min-h-screen">
         <div className=" flex items-center justify-center w-full">
-          <h1 className="text-5xl md:text-6xl font-bold text-center">Trusted by Productive People</h1>
+          <h1 className="text-5xl md:text-6xl font-bold text-center">
+            Trusted by Productive People
+          </h1>
         </div>
         <div className="overflow-x-auto mt-15 scrollbar-hide">
-          <div className="flex min-w-max gap-10">
+          <div className="flex min-w-max gap-10 my-3">
             {Card({
               name: "Hafidz",
               image: "/src/assets/hafidz.png",
@@ -198,6 +205,18 @@ function App() {
             })}
           </div>
         </div>
+      </div>
+
+      <div className="bg-[#d1d5db] w-full min-h-screen flex flex-col items-center justify-center">
+        <h1 className="text-7xl sm:text-8xl md:text-9xl text-center">
+          What are you <br /> waiting for?
+        </h1>
+        <Link
+          to="/login"
+          className="mt-10 bg-[#00AEFF] font-semibold text-white px-5 md:text-xl text-xs py-1 shadow-lg rounded-xl hover:bg-sky-500  transition-colors"
+        >
+          Join Now
+        </Link>
       </div>
     </>
   );

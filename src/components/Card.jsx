@@ -1,6 +1,6 @@
 export default function Card({ name, image, testimonial }) {
   return (
-    <div className="bg-[#e6e6e6] h-100 w-70 rounded-4xl flex flex-col items-center justify-between">
+    <div className="bg-[#e6e6e6] h-100 w-70 rounded-4xl flex flex-col items-center justify-between drop-shadow-lg">
       <div className="flex flex-col items-center justify-center pt-13">
         <img
           src={image}
