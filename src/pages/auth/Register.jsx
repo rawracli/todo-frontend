@@ -41,18 +41,19 @@ function Register() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-950 flex items-center justify-center px-4">
-      <div className="bg-gray-900 shadow-lg w-5xl grid md:grid-cols-2 grid-cols-1 md:rounded-3xl rounded-xl">
-        <div className="bg-gray-800 rounded-l-3xl hidden md:flex justify-center items-center">
+    <div className="min-h-screen bg-[#F6F6F6] flex items-center justify-center px-4">
+      <div className="shadow-lg w-5xl grid md:grid-cols-2 grid-cols-1 md:rounded-3xl rounded-xl">
+        <div className="bg-white rounded-l-3xl hidden md:flex justify-center items-center">
+          <img src="logoDark.png" alt="" srcset="" className="w-15 mr-2" />
           <Link to="/" className="text-6xl text-white font-bold">
-            Todobee
+            FocusFlow
           </Link>
         </div>
         <div className="py-15 px-10">
           <h2 className="font-bold text-white text-center text-4xl">Daftar</h2>
           <form className="mt-5" onSubmit={handleRegiter}>
             <div>
-              <label className="text-gray-300">Nama</label>
+              <label className="">Nama</label>
               <label className="input validator w-full mt-1">
                 <input
                   type="text"
@@ -65,7 +66,7 @@ function Register() {
               </label>
             </div>
             <div className="mt-3">
-              <label className="text-gray-300">Email</label>
+              <label className="">Email</label>
               <label className="input validator w-full mt-1">
                 <input
                   type="email"
@@ -78,13 +79,13 @@ function Register() {
               </label>
             </div>
             <div className="mt-3">
-              <label className="text-gray-300">Password</label>
+              <label className="">Password</label>
               <label className="input validator w-full mt-1">
                 <input
                   name="password"
                   value={form.password}
                   onChange={handleChange}
-                  minLength={6}
+                  minLength={8}
                   type="password"
                   placeholder="Password"
                   required
@@ -99,13 +100,13 @@ function Register() {
             <div className="mt-4">
               <button
                 type="submit"
-                className="text-white btn hover:bg-yellow-500 bg-yellow-400 w-full"
+                className="text-white btn hover:bg-sky-500 bg-sky-400 w-full"
               >
                 Daftar
               </button>
             </div>
             <div className="mt-2">
-              <small className="text-gray-300">
+              <small className="">
                 Sudah punya akun?{" "}
                 <Link to="/login" className="text-yellow-400 hover:text-yellow-500">
                   Login sekarang

@@ -38,18 +38,19 @@ function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-950 flex items-center justify-center px-4">
-      <div className="bg-gray-900 shadow-lg w-5xl grid md:grid-cols-2 grid-cols-1 md:rounded-3xl rounded-xl">
-        <div className="bg-gray-800 rounded-l-3xl justify-center items-center hidden md:flex">
+    <div className="min-h-screen bg-[#F6F6F6] flex items-center justify-center px-4">
+      <div className="shadow-lg w-5xl grid md:grid-cols-2 grid-cols-1 md:rounded-3xl rounded-xl">
+        <div className="bg-white rounded-l-3xl justify-center items-center hidden md:flex">
+          <img src="logoDark.png" alt="" srcset="" className="w-15 mr-2" />
           <Link to="/" className="text-6xl text-white font-bold">
-            Todobee
+            FocusFlow
           </Link>
         </div>
         <div className="py-15 px-10">
           <h2 className="font-bold text-center text-4xl text-white">Login</h2>
           <form className="mt-5" onSubmit={handleLogin}>
             <div>
-              <label className="text-gray-300">Email</label>
+              <label className="">Email</label>
               <label className="input validator w-full mt-1">
                 <input
                   type="email"
@@ -61,7 +62,7 @@ function Login() {
               </label>
             </div>
             <div className="mt-3">
-              <label className="text-gray-300">Password</label>
+              <label className="">Password</label>
               <label className="input validator w-full mt-1">
                 <input
                   type="password"
@@ -79,13 +80,13 @@ function Login() {
             <div className="mt-4">
               <button
                 type="submit"
-                className="text-white btn hover:bg-yellow-500 bg-yellow-400 w-full"
+                className="text-white btn hover:bg-sky-500 bg-sky-400 w-full"
               >
                 Login
               </button>
             </div>
             <div className="mt-2">
-              <small className="text-gray-300">
+              <small className="">
                 Belum punya akun?{" "}
                 <Link
                   to="/register"
