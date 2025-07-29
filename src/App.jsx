@@ -137,21 +137,21 @@ function App() {
       {/* //todo: use fluid layout for features section */}
       {/* Features */}
       <div className="relative overflow-visible bg-[#d1d5db] justify-center min-h-screen items-center px-6 py-10 xl:space-x-16 flex">
-        <div className="rounded-[110px] border-y-2 w-full min-h-[80vh] f items-center justify-center">
+        <div className="rounded-[110px] border-black border-y-2 w-full min-h-[80vh] f items-center justify-center">
           <div className="flex flex-col items-center justify-center pt-4">
             <h2 className="absolute top-5 text-5xl md:text-6xl font-bold text-center mb-5 bg-[#d1d5db]">
               What Can We Do?
             </h2>
           </div>
           <div className="grid grid-cols-1 mt-7 mb-6 sm:mb-3 mx-10 sm:mx-15 md:mx-20 md:grid-cols-2 md:grid-rows-2 min-h-[65vh]">
-            <div className="border-b-2 border-r-2 text-right  pt-3 pb-3 md:pb-1 pr-3">
+            <div className="border-b-2 border-r-2 border-black text-right  pt-3 pb-3 md:pb-1 pr-3">
               {feature({
                 heading: "Smart Task Management",
                 description:
                   "Easily create, edit, and organize your daily tasks to stay focused and productive.",
               })}
             </div>
-            <div className="border-b-2 border-l-2 text-left  pt-3 pb-3 md:pb-1 pl-3">
+            <div className="border-b-2 border-l-2 border-black text-left  pt-3 pb-3 md:pb-1 pl-3">
               {feature({
                 heading: (
                   <>
@@ -163,14 +163,14 @@ function App() {
                   "Never miss a task with custom due dates and timely notifications directly sent to your email.",
               })}
             </div>
-            <div className="border-t-2 border-r-2 text-right  pt-3 pb-3 md:pb-1 pr-3">
+            <div className="border-t-2 border-r-2 border-black text-right  pt-3 pb-3 md:pb-1 pr-3">
               {feature({
                 heading: "Categories & Labels",
                 description:
                   "Group your tasks by category or label for a cleaner, more personalized workflow.",
               })}
             </div>
-            <div className="border-t-2 border-l-2 text-left  pt-3 pb-3 md:pb-1 pl-3">
+            <div className="border-t-2 border-l-2 border-black text-left  pt-3 pb-3 md:pb-1 pl-3">
               {feature({
                 heading: "Progress Tracking",
                 description:

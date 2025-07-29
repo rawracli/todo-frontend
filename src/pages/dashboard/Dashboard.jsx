@@ -22,13 +22,13 @@ function Dashboard() {
 
   return (
     <>
-      <div className="bg-gray-900 mb-6 py-5 px-5 rounded-md">
+      <div className="bg-white mb-6 py-5 px-5 rounded-md">
         <h1 className="font-bold text-2xl text-white">Dashboard</h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
         <Link
           to="/todo-list"
-          className="bg-gray-900 p-6 rounded-md hover:shadow-md transition"
+          className="bg-white p-6 rounded-md hover:shadow-md transition"
           data-aos="fade-up"
         >
           <h2 className="text-white text-lg mb-2">Total Todos</h2>

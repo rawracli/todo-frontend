@@ -14,14 +14,14 @@ function DashboardLayout() {
   }, []);
 
   return (
-    <div className="flex min-h-screen bg-gray-950">
+    <div className="flex min-h-screen bg-white">
       {/* Sidebar */}
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
       {/* Konten utama */}
       <div className="flex-1">
         {/* Navbar Mobile */}
-        <div className="bg-gray-900 text-white px-6 md:px-10 py-4 xl:hidden flex justify-between items-center sticky top-0 z-40 shadow-md">
+        <div className="bg-amber-300   text-white px-6 md:px-10 py-4 xl:hidden flex justify-between items-center sticky top-0 z-40 shadow-md">
           <button onClick={() => setSidebarOpen(true)} className="text-2xl">
             <i className="fa-solid fa-bars"></i>
           </button>

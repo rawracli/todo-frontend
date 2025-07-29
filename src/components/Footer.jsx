@@ -17,7 +17,7 @@ function Footer() {
             <div class="grid grid-flow-col gap-2">
               <a>
                 <svg
-                  class="w-[24px] h-[24px] text-gray-800 dark:text-white"
+                  class="w-[24px] h-[24px] text-gray-800"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -35,7 +35,7 @@ function Footer() {
               </a>
               <a>
                 <svg
-                  class=" text-gray-800 dark:text-white"
+                  class=" text-gray-800"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -53,7 +53,7 @@ function Footer() {
               </a>
               <a>
                 <svg
-                  class="w-6 h-6 text-gray-800 dark:text-white"
+                  class="w-6 h-6 text-gray-800 "
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -74,7 +74,7 @@ function Footer() {
         <div class="grid grid-flow-col gap-2">
           <a>
             <svg
-              class="w-[24px] h-[24px] text-gray-800 dark:text-white"
+              class="w-[24px] h-[24px] text-gray-800"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -92,7 +92,7 @@ function Footer() {
           </a>
           <a>
             <svg
-              class=" text-gray-800 dark:text-white"
+              class=" text-gray-800 "
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -110,7 +110,7 @@ function Footer() {
           </a>
           <a>
             <svg
-              class="w-6 h-6 text-gray-800 dark:text-white"
+              class="w-6 h-6 text-gray-800 "
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
